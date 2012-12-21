@@ -447,12 +447,12 @@ namespace zmq {
       case ZMQ_RECOVERY_IVL:
       case 10:
         return socket->SetSockOpt<int64_t>(option, args[1]);
-      case 23: /* ZMQ_SNDHWM */
-      case 24: /* ZMQ_RCVHWM */
       case ZMQ_IDENTITY:
       case ZMQ_SUBSCRIBE:
       case ZMQ_UNSUBSCRIBE:
         return socket->SetSockOpt<char*>(option, args[1]);
+      case 23: /* ZMQ_SNDHWM */
+      case 24: /* ZMQ_RCVHWM */
       case ZMQ_LINGER:
       case ZMQ_RECONNECT_IVL:
       case ZMQ_BACKLOG:
